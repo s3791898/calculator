@@ -1,4 +1,111 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: aqua;
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 52px;
+  color: #BA55D3;
+  margin-top: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#calculator {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 15%);
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#display {
+  font-size: 5rem;
+  height: 100px;
+  width: 100%;
+  text-align: right;
+  pointer-events: none;
+  padding-right: 10px;
+  border: none;
+  background-color: hsl(0, 0%, 10%);
+  color: white;
+}
+
+#keys {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.button-container {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  justify-content: flex-end;
+}
+
+.button-container>button {
+  box-sizing: border-box;
+  border-radius: 50px;
+  border: none;
+  width: 25%;
+  height: 90px;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  background-color: hsl(164.7, 60.6%, 30%);
+}
+
+.button-container>button:hover {
+  background-color: hsl(164.7, 60.6%, 40%);
+  ;
+}
+
+.button-container>button:active {
+  background-color: hsl(164.7, 60.6%, 50%);
+}
+
+.button-container>.operator-btn {
+  background-color: hsl(28.3, 91.2%, 40%);
+  ;
+}
+
+.button-container>.operator-btn:hover {
+  background-color: hsl(28.3, 91.2%, 50%);
+}
+
+.button-container>.operator-btn:active {
+  background-color: hsl(28.3, 91.2%, 60%);
+}
+
+
+footer {
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px;
 }
