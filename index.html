@@ -7,6 +7,7 @@
   <link rel="shortcut icon" type="x-icon" href="images/calculator.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.cdnfonts.com/css/scientific-calculator-lcd" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Calculator</title>
@@ -20,34 +21,35 @@
       <input id="display" readonly>
       <div id="keys">
         <div class="button-container">
-          <button onclick="appendToDisplay('7')">7</button>
-          <button onclick="appendToDisplay('8')">8</button>
-          <button onclick="appendToDisplay('9')">9</button>
-          <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+          <button class="operator-btn" onclick="clearLastEntry()">DELETE</button>
+          <button class="operator-btn" onclick="clearDisplay()" data-clear>C</button>
         </div>
         <div class="button-container">
-          <button onclick="appendToDisplay('4')">4</button>
-          <button onclick="appendToDisplay('5')">5</button>
-          <button onclick="appendToDisplay('6')">6</button>
-          <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+          <button onclick="appendToDisplay('7')" data-number>7</button>
+          <button onclick="appendToDisplay('8')" data-number>8</button>
+          <button onclick="appendToDisplay('9')" data-number>9</button>
+          <button class="operator-btn" onclick="appendToDisplay('+')" data-operation>+</button>
         </div>
         <div class="button-container">
-          <button onclick="appendToDisplay('1')">1</button>
-          <button onclick="appendToDisplay('2')">2</button>
-          <button onclick="appendToDisplay('3')">3</button>
-          <button onclick="appendToDisplay('×')" class="operator-btn">×</button>
+          <button onclick="appendToDisplay('4')" data-number>4</button>
+          <button onclick="appendToDisplay('5')" data-number>5</button>
+          <button onclick="appendToDisplay('6')" data-number>6</button>
+          <button class="operator-btn" onclick="appendToDisplay('-')" data-operation>-</button>
         </div>
         <div class="button-container">
-          <button onclick="appendToDisplay('0')">0</button>
-          <button onclick="appendToDisplay('.')">.</button>
-          <button onclick="calculate()">=</button>
-          <button onclick="appendToDisplay('÷')" class="operator-btn">÷</button>
+          <button onclick="appendToDisplay('1')" data-number>1</button>
+          <button onclick="appendToDisplay('2')" data-number>2</button>
+          <button onclick="appendToDisplay('3')" data-number>3</button>
+          <button class="operator-btn" onclick="appendToDisplay('×')" data-operation>×</button>
         </div>
         <div class="button-container">
-          <button onclick="clearDisplay()" class="operator-btn">C</button>
+          <button onclick="appendToDisplay('0')" data-number>0</button>
+          <button onclick="appendToDisplay('.')" data-number>.</button>
+          <button onclick="calculate()" data-equals>=</button>
+          <button class="operator-btn" onclick="appendToDisplay('÷')" data-operation>÷</button>
         </div>
       </div>
-    </div>
+      </input>
   </main>
 
   <footer>
