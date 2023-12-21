@@ -18,10 +18,10 @@
 
   <main>
     <div id="calculator">
-      <input id="display" readonly>
+      <input type="text" id="display" readonly>
       <div id="keys">
         <div class="button-container">
-          <button class="operator-btn" onclick="clearLastEntry()">DELETE</button>
+          <button class="operator-btn" onclick="clearLastEntry()" data-delete>DELETE</button>
           <button class="operator-btn" onclick="clearDisplay()" data-clear>C</button>
         </div>
         <div class="button-container">
@@ -45,7 +45,7 @@
         <div class="button-container">
           <button onclick="appendToDisplay('0')" data-number>0</button>
           <button onclick="appendToDisplay('.')" data-number>.</button>
-          <button onclick="calculate()" data-equals>=</button>
+          <button onclick="operate()" data-equals>=</button>
           <button class="operator-btn" onclick="appendToDisplay('÷')" data-operation>÷</button>
         </div>
       </div>

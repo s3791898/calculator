@@ -8,6 +8,7 @@ const numberButtons = document.querySelectorAll("[data-number]");
 const operationButtons = document.querySelectorAll("[data-operation]");
 const equalsButton = document.querySelector("[data-equals]");
 const clearButton = document.querySelector("[data-clear]");
+const deleteButton = document.querySelector("[data-delete]");
 
 function add(a, b) {
   return a + b;
@@ -28,23 +29,34 @@ function divide(a, b) {
 function operate(operator, a, b) {
   a = Number(a);
   b = Number(b);
+  let result = "";
+
+  // I need to figure out how to retrieve and store the first operand, second operand and the operator values in the display
+  // Might be able to use the split method to retrieve the first operand, second operand and the operator
 
   switch (operator) {
     case "+":
-      return add(a, b);
+      result = add(a, b);
+      break;
     case "-":
-      return subtract(a, b);
+      result = subtract(a, b);
+      break;
     case "*":
-      return multiply(a, b);
+      result = multiply(a, b);
+      break;
     case "/":
       if (b === 0) {
-        return null;
+        result = null;
       } else {
-        return divide(a, b);
+        result = divide(a, b);
       }
+      break;
     default:
-      return null;
+      result = null;
   }
+
+  display.value = result;
+  return result;
 }
 
 function clearDisplay() {
