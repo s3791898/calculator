@@ -18,39 +18,42 @@
 
   <main>
     <div id="calculator">
-      <input type="text" id="display" readonly>
+      <div id="screen">
+        <div class="previous"></div>
+        <div class="current"></div>
+      </div>
       <div id="keys">
         <div class="button-container">
-          <button class="operator-btn" onclick="deleteLastEntry()" data-delete>DELETE</button>
-          <button class="operator-btn" onclick="clearDisplay()" data-clear>AC</button>
+          <button id="delete-btn" class="btn">DELETE</button>
+          <button id="clear-btn" class="btn">AC</button>
         </div>
 
         <div class="button-container">
-          <button onclick="appendToDisplay('7')" data-number>7</button>
-          <button onclick="appendToDisplay('8')" data-number>8</button>
-          <button onclick="appendToDisplay('9')" data-number>9</button>
-          <button class="operator-btn" onclick="appendToDisplay('+')" data-operation>+</button>
+          <button class="btn number">7</button>
+          <button class="btn number">8</button>
+          <button class="btn number">9</button>
+          <button class="btn operator">+</button>
         </div>
 
         <div class="button-container">
-          <button onclick="appendToDisplay('4')" data-number>4</button>
-          <button onclick="appendToDisplay('5')" data-number>5</button>
-          <button onclick="appendToDisplay('6')" data-number>6</button>
-          <button class="operator-btn" onclick="appendToDisplay('-')" data-operation>-</button>
+          <button class="btn number">4</button>
+          <button class="btn number">5</button>
+          <button class="btn number">6</button>
+          <button class="btn operator">-</button>
         </div>
 
         <div class="button-container">
-          <button onclick="appendToDisplay('1')" data-number>1</button>
-          <button onclick="appendToDisplay('2')" data-number>2</button>
-          <button onclick="appendToDisplay('3')" data-number>3</button>
-          <button class="operator-btn" onclick="appendToDisplay('*')" data-operation>×</button>
+          <button class="btn number">1</button>
+          <button class="btn number">2</button>
+          <button class="btn number">3</button>
+          <button class="btn operator">x</button>
         </div>
 
         <div class="button-container">
-          <button onclick="appendToDisplay('0')" data-number>0</button>
-          <button onclick="appendToDisplay('.')" data-number>.</button>
-          <button onclick="operate()" data-equals>=</button>
-          <button class="operator-btn" onclick="appendToDisplay('/')" data-operation>÷</button>
+          <button class="btn number">0</button>
+          <button class="btn decimal">.</button>
+          <button class="btn equal">=</button>
+          <button class="btn operator">/</button>
         </div>
       </div>
     </div>

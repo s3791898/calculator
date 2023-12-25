@@ -16,7 +16,7 @@ body {
 h1 {
   font-family: 'Bebas Neue', sans-serif;
   text-align: center;
-  font-size: 6rem;
+  font-size: 4rem;
   color: #BA55D3;
   margin-top: 50px;
 }
@@ -40,17 +40,27 @@ main {
   border: 5px solid black;
 }
 
-#display {
+#screen {
   font-family: 'Scientific Calculator LCD', sans-serif;
   font-size: 1rem;
   height: 100px;
   width: 100%;
-  text-align: right;
-  pointer-events: none;
   padding-right: 10px;
   border: none;
   background-color: hsl(0, 0%, 10%);
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.previous {
+  font-size: 20px;
+}
+
+.current {
+  font-size: 30px;
 }
 
 #keys {
@@ -89,16 +99,16 @@ main {
   background-color: hsl(164.7, 60.6%, 50%);
 }
 
-.button-container>.operator-btn {
+.button-container>.operator {
   background-color: hsl(28.3, 91.2%, 40%);
   ;
 }
 
-.button-container>.operator-btn:hover {
+.button-container>.operator:hover {
   background-color: hsl(28.3, 91.2%, 50%);
 }
 
-.button-container>.operator-btn:active {
+.button-container>.operator:active {
   background-color: hsl(28.3, 91.2%, 60%);
 }
 
