@@ -38,6 +38,8 @@ main {
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border: 5px solid black;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 #screen {
